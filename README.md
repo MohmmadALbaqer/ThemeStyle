@@ -38,5 +38,5 @@ $ git pull origin master
 - [![Github](https://img.shields.io/badge/Github-MohnnadALbaqer-green?style=for-the-badge&logo=github)](https://github.com/MohmmadALbaqer)
 
 
-- [![Facebook](https://img.shields.io/badge/Instagram-r94xs-green?style=for-the-badge&logo=facebook)](https://instagram.com/r94xs)
+- [![instagram](https://img.shields.io/badge/Instagram-r94xs-green?style=for-the-badge&logo=facebook)](https://instagram.com/r94xs)
 
