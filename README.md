@@ -17,6 +17,8 @@ $ git clone https://github.com/MohmmadALbaqer/StyleTheme.git
 $ cd StyleTheme
 $ pip3 install -r requirements.txt
 $ python3 install.py
+# OR
+$ bash install.sh
 $ python3 Style.py
 
 ```
