@@ -13,7 +13,7 @@ The idea of the tool is to change the appearance or environment of Kali Linux in
 ### Installation (Kali Linux)
 
 ```
-$ git clone https://github.com/MohmmadALbaqer/ScanTracking.git
+$ git clone https://github.com/MohmmadALbaqer/StyleTheme.git
 $ cd StyleTheme
 $ pip3 install -r requirements.txt
 $ python3 install.py
