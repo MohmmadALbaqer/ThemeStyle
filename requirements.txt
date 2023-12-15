@@ -1,0 +1,7 @@
+subprocess
+style
+Fore
+init
+colorwd
+pyfiglet
+requests
