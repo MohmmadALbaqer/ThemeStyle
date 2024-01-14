@@ -1,7 +1,6 @@
 import os
 import sys
 import subprocess
-import pyfiglet
 import time 
 import random
 from colorama import Fore, Style, init
