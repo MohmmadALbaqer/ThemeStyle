@@ -7,18 +7,6 @@ import random
 from colorama import Fore, Style, init
 from termcolor import colored
 from time import sleep
-
-def print_loading():
-    loading_text = colored("[*]", "blue") + colored("Running", "red") + colored("...", "yellow")
-    
-    for char in loading_text:
-        print(char, end='', flush=True)
-        time.sleep(0.1)
-
-print_loading()
-
-print(1*"\n")
-
 os.system("clear")
 
 blue_text = """
@@ -55,29 +43,12 @@ blue_text = """
 
 print('\033[94m' + blue_text + '\033[0m')
 
-insta_text = (
-    "+----------------------------------------------------+\n"
-    f"{Fore.RED}INSTAGRAM{Fore.YELLOW} ==> {Fore.CYAN}https://www.instagram.com/r94xs/{Style.RESET_ALL}   \n"
-    f"{Fore.RED}GitHub{Fore.YELLOW} =====> {Fore.CYAN}https://www.github.com/MohmmadALbaqer/{Style.RESET_ALL}   \n"
-    "+----------------------------------------------------+"
-)
-print(insta_text)
-
-print(1*"\n")
-
-def wait_with_spinner(seconds):
-    symbols = "/-|\\"
-
-    for _ in range(int(seconds)):
-        for symbol in symbols:
-            sys.stdout.write(f"\rPlease wait {symbol}  ")
-            sys.stdout.flush()
-            time.sleep(0.25)
-
-    sys.stdout.write("\r" + " " * 20 + "\r")
-
-wait_time = 2.5
-wait_with_spinner(wait_time)
+print(f'''
+ {Fore.RED}<--------------------------------------------------------------------->
+ {Fore.RED}|{Fore.GREEN} GitHub{Fore.WHITE} : {Fore.BLUE}MohmmadALbaqer {Fore.WHITE}|{Fore.YELLOW}   https://www.instagram.com/r94xs/        {Fore.RED}|
+ {Fore.RED}|{Fore.GREEN} Instagram{Fore.WHITE} :{Fore.BLUE} r94xs {Fore.WHITE}      |{Fore.YELLOW}   https://www.github.com/MohmmadALbaqer/  {Fore.RED}|
+ {Fore.RED}+---------------------------------------------------------------------+
+''')
 
 text = "Note:- After making each shape, you need to work on it\"Restart\" "
 
@@ -111,15 +82,15 @@ def change_default_environment():
         subprocess.run(['sudo', 'reboot'])
         print('Successfully restored the default desktop environment')
     except Exception as e:
-        print(f'Error restoring default environment: {e}')
+        print(f'{Fore.YELLOW}[{Fore.RED}!{Fore.YELLOW}] {Fore.RED}Error restoring default environment: {e}{Style.RESET_ALL}')
 
 def change_desktop_environment():
     print_colored_options()
     try:
-        environment_choice = int(input('Enter the number corresponding to the desired environment: '))
+        environment_choice = int(input(f'{Fore.GREEN}[+] Enter the number corresponding to the desired environment: {Style.RESET_ALL}'))
         change_desktop_environment_by_choice(environment_choice)
     except ValueError:
-        print('Invalid input. Please enter a valid number.')
+        print(f'{Fore.YELLOW}[{Fore.RED}!{Fore.YELLOW}] {Fore.RED}Invalid input. Please enter a valid number.{Style.RESET_ALL}')
 
 def change_desktop_environment_by_choice(choice):
     selected_environment = environments.get(choice)
@@ -129,13 +100,13 @@ def change_desktop_environment_by_choice(choice):
             subprocess.run(['sudo', 'apt', 'install', f'kali-desktop-{selected_environment}', '-y'])
             print(f'Successfully changed the desktop environment to {selected_environment}')
 
-            reboot_choice = input('Do you want to reboot? (y/n): ').lower()
+            reboot_choice = input('[*] Do you want to reboot? (y/n): ').lower()
             if reboot_choice == 'y':
                 subprocess.run(['sudo', 'reboot'])
         except Exception as e:
-            print(f'Error changing desktop environment: {e}')
+            print(f'{Fore.YELLOW}[{Fore.RED}!{Fore.YELLOW}] {Fore.RED}Error changing desktop environment: {e}{Style.RESET_ALL}')
     else:
-        print('Invalid choice')
+        print(f'{Fore.YELLOW}[{Fore.RED}!{Fore.YELLOW}] {Fore.RED}Invalid choice{Style.RESET_ALL}')
 
 def print_colored_options():
     colored_options = {
@@ -150,20 +121,20 @@ def print_colored_options():
         print(f'{colored_options[i]}[ {i} ] {colored_options[5]}{environments[i]}')
 
 def main():
-    print('[1] Restore Default Environment')
-    print('[2] Change Desktop Environment')
+    print(f'{Fore.GREEN}[1] Restore Default Environment{Style.RESET_ALL}')
+    print(f'{Fore.GREEN}[2] Change Desktop Environment{Style.RESET_ALL}')
 
     try:
-        choice = int(input('Enter your choice: '))
+        choice = int(input(f'{Fore.BLUE}[+] Enter your choice: {Style.RESET_ALL}'))
 
         if choice == 1:
             change_default_environment()
         elif choice == 2:
             change_desktop_environment()
         else:
-            print('Invalid choice')
+            print(f'{Fore.YELLOW}[{Fore.RED}!{Fore.YELLOW}] {Fore.RED}Invalid choice{Style.RESET_ALL}')
     except ValueError:
-        print('Invalid input. Please enter a valid number.')
+        print(f'{Fore.YELLOW}[{Fore.RED}!{Fore.YELLOW}] {Fore.RED}Invalid input. Please enter a valid number.{Style.RESET_ALL}')
 
 if __name__ == "__main__":
     main()
