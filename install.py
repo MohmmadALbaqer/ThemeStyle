@@ -24,8 +24,7 @@ libraries_to_install = [
     "colored",
     "pyfiglet",
     "requests",
-    "os",
-    "sys"
+    "os"
 ]
 
 for library in libraries_to_install:
