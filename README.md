@@ -1,4 +1,4 @@
-### Style Theme V 1.2
+### Style Theme (V 1.2)
 ```
             ..,;:ccc,.                              
           ......''';lxO.                            
