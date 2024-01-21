@@ -1,11 +1,7 @@
 import os
-import sys
 import subprocess
-import time 
-import random
-from colorama import Fore, Style, init
+from colorama import Fore, Style
 from termcolor import colored
-from time import sleep
 os.system("clear")
 
 blue_text = """
@@ -20,7 +16,7 @@ blue_text = """
                     0M.                 .:o.       
                     ;Wd                            
                      ;XO,                       [BY MohmmadALbaqer]  
-                       ,d0Odlc;,..              [version 1]     
+                       ,d0Odlc;,..              [version 1.2]     
                            ..',;:cdOOd::,.          
                                     .:d;.':;.       
                                        'd,  .'      
@@ -28,16 +24,13 @@ blue_text = """
                                           .o         
                                             c      
                                             .'
-                                             .      
-                                                                   
+                                             .                                                                      
   _________ __          __         ___________/\\                           
  /   _____//  |_____ __|  |   ____ \\__    ___/  |__   ____   _____   ____  
  \\_____  \\\\   __\\   |  |  | _/ __ \\  |    |  |  |  \\_/ __ \\ /     \\_/ __ \\ 
  /        \\|  |  \\___  |  |__  ___/_ |    |  |      \\  ___/_  | |  \\  ___/_
 /_______  /|__|  / ____|____/\\___  / |____|  |___|  /\\___  /__|_|  /\\___  /
         \\/       \\/              \\/               \\/     \\/      \\/     \\/ 
-             
-
 """
 
 print('\033[94m' + blue_text + '\033[0m')
@@ -47,7 +40,7 @@ print(f'''
  {Fore.RED}|{Fore.GREEN} GitHub{Fore.WHITE} : {Fore.BLUE}MohmmadALbaqer {Fore.WHITE}|{Fore.YELLOW}   https://www.instagram.com/r94xs/        {Fore.RED}|
  {Fore.RED}|{Fore.GREEN} Instagram{Fore.WHITE} :{Fore.BLUE} r94xs {Fore.WHITE}      |{Fore.YELLOW}   https://www.github.com/MohmmadALbaqer/  {Fore.RED}|
  {Fore.RED}+---------------------------------------------------------------------+
-''')
+{Style.RESET_ALL}''')
 
 text = "Note:- After making each shape, you need to work on it\"Restart\" "
 
