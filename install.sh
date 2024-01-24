@@ -5,3 +5,4 @@ pip install init
 pip install colored
 pip install pyfiglet
 pip install requests
+chmod +x *
