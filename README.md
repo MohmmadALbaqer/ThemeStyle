@@ -29,6 +29,16 @@
 ```
 
 
+### Advantages
+```
+Allows you to change the Kali Linux shape of the file to 5 shapes
+
+1- xfce4
+2- gnome
+3- kde-plasma
+4- mate
+5- lxqt
+```
 
 
 
