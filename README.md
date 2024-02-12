@@ -1,4 +1,4 @@
-### Style Theme (V 1 . 2)
+### Style Theme (V.2)
 ```
             ..,;:ccc,.                              
           ......''';lxO.                            
@@ -38,6 +38,8 @@ Allows you to change the Kali Linux shape of the file to 5 shapes
 3- kde-plasma
 4- mate
 5- lxqt
+6- i3
+7- lightdm
 ```
 
 
