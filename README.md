@@ -31,7 +31,7 @@
 
 ### Advantages
 ```
-Allows you to change the Kali Linux shape of the file to 5 shapes
+Allows you to change the Kali Linux shape of the file to 7 shapes
 
 1- xfce4
 2- gnome
