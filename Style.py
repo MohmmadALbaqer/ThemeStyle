@@ -1,10 +1,12 @@
 import os
 import subprocess
-from colorama import Fore, Style
-from termcolor import colored
+from colorama import Fore, Style, init
+
+init(autoreset=True) 
+
 os.system("clear")
 
-blue_text = """
+blue_text = f"""
             ..,;:ccc,.                             
           ......''';lxO.                           
 .....''''..........,:ld;                           
@@ -16,7 +18,7 @@ blue_text = """
                     0M.                 .:o.       
                     ;Wd                            
                      ;XO,                       [BY MohmmadALbaqer]  
-                       ,d0Odlc;,..              [version 1.2]     
+                       ,d0Odlc;,..              [version 2]     
                            ..',;:cdOOd::,.          
                                     .:d;.':;.       
                                        'd,  .'      
@@ -33,7 +35,7 @@ blue_text = """
         \\/       \\/              \\/               \\/     \\/      \\/     \\/ 
 """
 
-print('\033[94m' + blue_text + '\033[0m')
+print(Fore.BLUE + blue_text + Style.RESET_ALL)
 
 print(f'''
  {Fore.RED}<--------------------------------------------------------------------->
@@ -47,18 +49,18 @@ text = "Note:- After making each shape, you need to work on it\"Restart\" "
 note_start_index = text.find("Note:-")
 if note_start_index != -1:
     note_end_index = note_start_index + len("Note:-")
-    colored_text = colored(text[:note_start_index], "red") + colored(text[note_start_index:note_end_index], "red") + text[note_end_index:]
+    colored_text = Fore.RED + text[:note_start_index] + text[note_start_index:note_end_index] + text[note_end_index:]
 else:
     colored_text = text
 
 restart_start_index = colored_text.find("Restart")
 if restart_start_index != -1:
     restart_end_index = restart_start_index + len("Restart")
-    colored_text = colored_text[:restart_start_index] + colored(colored_text[restart_start_index:restart_end_index], "yellow") + colored_text[restart_end_index:]
+    colored_text = colored_text[:restart_start_index] + Fore.YELLOW + colored_text[restart_start_index:restart_end_index] + colored_text[restart_end_index:]
 
 print(colored_text)
 
-print(1*"\n")
+print(1 * "\n")
 
 environments = {
     1: 'xfce4',
@@ -66,6 +68,8 @@ environments = {
     3: 'kde-plasma',
     4: 'mate',
     5: 'lxqt',
+    6: 'i3',
+    7: 'lightdm',
 }
 
 def change_default_environment():
@@ -102,14 +106,16 @@ def change_desktop_environment_by_choice(choice):
 
 def print_colored_options():
     colored_options = {
-        1: '\033[92m',  # Green
-        2: '\033[94m',  # Blue
-        3: '\033[93m',  # Yellow
-        4: '\033[91m',  # Red
-        5: '\033[0m',   # Reset color
+        1: Fore.GREEN,   # Green
+        2: Fore.BLUE,    # Blue
+        3: Fore.YELLOW,  # Yellow
+        4: Fore.RED,     # Red
+        5: Fore.CYAN,    #Cyan
+        6: Fore.MAGENTA, #Magenta
+        7: Style.RESET_ALL,   # Reset color
     }
 
-    for i in range(1, 6):
+    for i in range(1, 7):
         print(f'{colored_options[i]}[ {i} ] {colored_options[5]}{environments[i]}')
 
 def main():
