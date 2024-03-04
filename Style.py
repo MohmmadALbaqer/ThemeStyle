@@ -1,12 +1,5 @@
 import os
-import sys
 from colorama import Fore, Style
-
-if os.geteuid() != 0:
-    red_sudo = "\033[1;31m" + "sudo" + "\033[0m"
-    print(f"{Fore.YELLOW}[{Fore.RED}!{Fore.YELLOW}] {Fore.WHITE}please use {Fore.YELLOW}root{Fore.WHITE} Type a command {red_sudo}")
-    sys.exit(1)
-
 os.system("clear")
 
 print(f"""{Fore.BLUE}
@@ -37,16 +30,28 @@ print(f"""{Fore.BLUE}
 """)
 
 def choose_environment():
-    print(f"{Fore.WHITE}[{Fore.GREEN}1{Fore.WHITE}]{Fore.BLUE} Switch between Kali Linux environments{Style.RESET_ALL}")
-    print(f"{Fore.WHITE}[{Fore.GREEN}2{Fore.WHITE}]{Fore.BLUE} Install environments{Style.RESET_ALL}")
-    print(f"{Fore.WHITE}[{Fore.GREEN}3{Fore.WHITE}]{Fore.BLUE} Install all environments{Style.RESET_ALL}")
+    print(f"""
++---+----------------------------------------+
+|{Fore.GREEN}ID{Style.RESET_ALL} | {Fore.YELLOW}Options{Style.RESET_ALL}                                |
+|---+----------------------------------------+
+| {Fore.BLUE}1{Style.RESET_ALL} | {Fore.MAGENTA}Switch between Kali Linux environments{Style.RESET_ALL} |
+| {Fore.BLUE}2{Style.RESET_ALL} | {Fore.MAGENTA}Install environments{Style.RESET_ALL}                   |
+| {Fore.BLUE}3{Style.RESET_ALL} | {Fore.MAGENTA}Install all environments{Style.RESET_ALL}               |
++---+----------------------------------------+
+""")
     
     choice = input(f"{Fore.WHITE}[{Fore.BLUE}+{Fore.WHITE}]{Fore.YELLOW} Please choose the option number: {Style.RESET_ALL}")
 
     if choice == '1':
-        print(f"{Fore.WHITE}[{Fore.GREEN}1{Fore.WHITE}] {Fore.YELLOW}gdm3{Style.RESET_ALL}")
-        print(f"{Fore.WHITE}[{Fore.GREEN}2{Fore.WHITE}] {Fore.YELLOW}lightdm{Style.RESET_ALL}")
-        print(f"{Fore.WHITE}[{Fore.GREEN}3{Fore.WHITE}] {Fore.YELLOW}sddm{Style.RESET_ALL}")
+        print(f"""
++---+---------+
+|{Fore.GREEN}ID{Style.RESET_ALL} | {Fore.YELLOW}Options{Style.RESET_ALL} |
+|---+---------+
+| {Fore.BLUE}1{Style.RESET_ALL} | {Fore.MAGENTA}gdm3{Style.RESET_ALL}    |
+| {Fore.BLUE}2{Style.RESET_ALL} | {Fore.MAGENTA}lightdm{Style.RESET_ALL} |
+| {Fore.BLUE}3{Style.RESET_ALL} | {Fore.MAGENTA}sddm{Style.RESET_ALL}    |
++---+---------+
+""")
         
         env_choice = input(f"{Fore.WHITE}[{Fore.BLUE}+{Fore.WHITE}]{Fore.YELLOW} Please choose the environment number: {Style.RESET_ALL}")
         
@@ -57,13 +62,20 @@ def choose_environment():
             print(f"{Fore.YELLOW}[{Fore.RED}!{Fore.YELLOW}] {Fore.RED}Incorrect selection please try again{Style.RESET_ALL}")
 
     elif choice == '2':
-        print(f"{Fore.WHITE}[{Fore.GREEN}1{Fore.WHITE}]{Fore.BLUE} lightdm{Style.RESET_ALL}")
-        print(f"{Fore.WHITE}[{Fore.GREEN}2{Fore.WHITE}]{Fore.BLUE} gdm3{Style.RESET_ALL}")
-        print(f"{Fore.WHITE}[{Fore.GREEN}3{Fore.WHITE}]{Fore.BLUE} kali-desktop-gnome{Style.RESET_ALL}")
-        print(f"{Fore.WHITE}[{Fore.GREEN}4{Fore.WHITE}]{Fore.BLUE} kali-desktop-kde{Style.RESET_ALL}")
-        print(f"{Fore.WHITE}[{Fore.GREEN}5{Fore.WHITE}]{Fore.BLUE} kali-desktop-xfce{Style.RESET_ALL}")
-        print(f"{Fore.WHITE}[{Fore.GREEN}6{Fore.WHITE}]{Fore.BLUE} kali-desktop-lxde{Style.RESET_ALL}")
-        print(f"{Fore.WHITE}[{Fore.GREEN}7{Fore.WHITE}]{Fore.BLUE} kali-desktop-i3{Style.RESET_ALL}")
+        print(f"""
++---+--------------------+
+|{Fore.GREEN}ID{Style.RESET_ALL} | {Fore.YELLOW}options{Style.RESET_ALL}            |
+|---+--------------------+
+| {Fore.BLUE}1{Style.RESET_ALL} | {Fore.MAGENTA}lightdm{Style.RESET_ALL}            |
+| {Fore.BLUE}2{Style.RESET_ALL} | {Fore.MAGENTA}gdm3{Style.RESET_ALL}               |
+| {Fore.BLUE}3{Style.RESET_ALL} | {Fore.MAGENTA}kali-desktop-gnome{Style.RESET_ALL} |
+| {Fore.BLUE}4{Style.RESET_ALL} | {Fore.MAGENTA}kali-desktop-kde{Style.RESET_ALL}   |
+| {Fore.BLUE}5{Style.RESET_ALL} | {Fore.MAGENTA}kali-desktop-xfce{Style.RESET_ALL}  |
+| {Fore.BLUE}6{Style.RESET_ALL} | {Fore.MAGENTA}kali-desktop-lxde{Style.RESET_ALL}  |
+| {Fore.BLUE}7{Style.RESET_ALL} | {Fore.MAGENTA}kali-desktop-i3{Style.RESET_ALL}    |
++---+--------------------+
+""")
+        
 
         env_choice = input(f"{Fore.WHITE}[{Fore.BLUE}+{Fore.WHITE}]{Fore.YELLOW} Please choose the environment number: {Style.RESET_ALL}")
 
