@@ -1,57 +1,63 @@
-### Style Theme (V.2)
+### Style Theme
 ```
-            ..,;:ccc,.                              
-          ......''';lxO.                            
-.....''''..........,:ld;                            
-           .';;;:::;,,.x,                           
-      ..'''.            0Xxoc:,.  ...               
-  ....                ,ONkc;,;cokOdc',.             
- .                   OMo           ':ddo.           
-                    dMc               :OO;
-                    0M.                 .:o.
-                    ;Wd
-                     ;XO,                       
-                       ,d0Odlc;,..              
-                           ..',;:cdOOd::,.
-                                    .:d;.':;.
-                                       'd,  .'
-                                         ;l   ..
-                                          .o
-                                            c
+
+            ..,;:ccc,.                             
+          ......''';lxO.                           
+.....''''..........,:ld;                           
+           .';;;:::;,,.x,                          
+      ..'''.            0Xxoc:,.  ...              
+  ....                ,ONkc;,;cokOdc',.            
+ .                   OMo           ':ddo.          
+                    dMc               :OO;          
+                    0M.                 .:o.       
+                    ;Wd                            
+                     ;XO,                         _____ _                            __ _         _        
+                       ,d0Odlc;,..               /__   \ |__   ___ _ __ ___   ___   / _\ |_ _   _| | ___     
+                           ..',;:cdOOd::,.         / /\/ '_ \ / _ \ '_ ` _ \ / _ \  \ \| __| | | | |/ _ \ 
+                                    .:d;.':;.     / /  | | | |  __/ | | | | |  __/  _\ \ |_| |_| | |  __/ 
+                                       'd,  .'    \/   |_| |_|\___|_| |_| |_|\___|  \__/\__|\__, |_|\___|   
+                                         ;l   ..                                            |___/         
+                                          .o         
+                                            c      
                                             .'
                                              .
-  _________ __          __         ___________/\
- /   _____//  |_____ __|  |   ____ \__    ___/  |__   ____   _____   ____
- \_____  \\   __\   |  |  | _/ __ \  |    |  |  |  \_/ __ \ /     \_/ __ \
- /        \|  |  \___  |  |__  ___/_ |    |  |      \  ___/_  | |  \  ___/_
-/_______  /|__|  / ____|____/\___  / |____|  |___|  /\___  /__|_|  /\___  /
-        \/       \/              \/               \/     \/      \/     \/
 ```
 
-
-### Advantages
 ```
-Allows you to change the Kali Linux shape of the file to 7 shapes
-
-1- xfce4
-2- gnome
-3- kde-plasma
-4- mate
-5- lxqt
-6- i3
-7- lightdm
+You have to make a choice from the three options.
+[1] Switch between Kali Linux environments
+[2] Install environments
+[3] Install all environments
 ```
 
+### Option number 1
+```
+When you choose the first option, it allows you to move between the three environments as it exists.
 
-
-
-### Interface 
+[1] gdm3
+[2] lightdm
+[3] sddm
 
 ```
-The idea of the tool is to change the appearance or environment of Kali Linux in five ways
 
-[1]- Return to the default format
-[2]- Choose the format
+### Option number 2
+```
+Allows you to download an environment of your choice from the seven environments.
+
+[1] lightdm
+[2] gdm3
+[3] kali-desktop-gnome
+[4] kali-desktop-kde
+[5] kali-desktop-xfce
+[6] kali-desktop-lxde
+[7] kali-desktop-i3
+
+```
+
+### Option number 3
+```
+Allows you to download all environments in one go
+
 ```
 
 
@@ -63,22 +69,10 @@ The idea of the tool is to change the appearance or environment of Kali Linux in
 $ git clone https://github.com/MohmmadALbaqer/StyleTheme.git
 $ cd StyleTheme
 $ pip3 install -r requirements.txt
-$ python3 install.py
-# OR
-$ bash install.sh
-$ python3 Style.py
+$ sudo python3 Style.py
 
 ```
 
-
-
-
-### updateing tool
-```
-$ cd StyleTheme
-$ git pull origin master
-
-```
 
 
 
