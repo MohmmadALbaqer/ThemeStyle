@@ -2,7 +2,7 @@
 ```
 
 
-![ScreenShot](screenshot.png)
+![Logo](screenshot.png)
 
 
 ```
