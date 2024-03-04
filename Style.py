@@ -1,5 +1,12 @@
 import os
+import sys
 from colorama import Fore, Style
+
+if os.geteuid() != 0:
+    red_sudo = "\033[1;31m" + "sudo" + "\033[0m"
+    print(f"{Fore.YELLOW}[{Fore.RED}!{Fore.YELLOW}] {Fore.WHITE}please use {Fore.YELLOW}root{Fore.WHITE} Type a command {red_sudo}")
+    sys.exit(1)
+
 os.system("clear")
 
 print(f"""{Fore.BLUE}
