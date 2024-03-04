@@ -47,8 +47,8 @@ Allows you to download all environments in one go
 ### Installation (Kali Linux)
 
 ```
-$ git clone https://github.com/MohmmadALbaqer/StyleTheme.git
-$ cd StyleTheme
+$ git clone https://github.com/MohmmadALbaqer/ThemeStyle.git
+$ cd ThemeStyle
 $ pip3 install -r requirements.txt
 $ sudo python3 Style.py
 
