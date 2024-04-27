@@ -11,9 +11,9 @@ M = "\033[95;1m"  # Magenta
 W = "\033[97;1m"  # White
 D = "\033[90;1m"  # Grey
 
-sign = f"{G}[{B}*{G}] {B}"
-Enter = f"{B}[{G}+{B}] {G}"
-ERROR = f"{Y}[{R}!{Y}] {R}"
+sign = f"{G}[{B}*{G}]{B}"
+Enter = f"{B}[{G}+{B}]{G}"
+ERROR = f"{Y}[{R}!{Y}]{R}"
 
 print(f"""{B}
             ..,;:ccc,.                             
