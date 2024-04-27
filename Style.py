@@ -1,8 +1,21 @@
 import os
-from colorama import Fore, Style
+
 os.system("clear")
 
-print(f"""{Fore.BLUE}
+R = "\033[91;1m"  # Red
+G = "\033[92;1m"  # Green
+B = "\033[94;1m"  # Blue
+Y = "\033[93;1m"  # Yellow
+C = "\033[96;1m"  # Cyan
+M = "\033[95;1m"  # Magenta
+W = "\033[97;1m"  # White
+D = "\033[90;1m"  # Grey
+
+sign = f"{G}[{B}*{G}] {B}"
+Enter = f"{B}[{G}+{B}] {G}"
+ERROR = f"{Y}[{R}!{Y}] {R}"
+
+print(f"""{B}
             ..,;:ccc,.                             
           ......''';lxO.                           
 .....''''..........,:ld;                           
@@ -13,83 +26,82 @@ print(f"""{Fore.BLUE}
                     dMc               :OO;          
                     0M.                 .:o.       
                     ;Wd                            
-                     {Fore.BLUE};XO,                         {Fore.RED}_____ _                            {Fore.YELLOW}__ _         _        
-                       {Fore.BLUE},d0Odlc;,..               {Fore.RED}/__   \ |__   ___ _ __ ___   ___   {Fore.YELLOW}/ _\ |_ _   _| | ___     
-                           {Fore.BLUE}..',;:cdOOd::,.         {Fore.RED}/ /\/ '_ \ / _ \ '_ ` _ \ / _ \  {Fore.YELLOW}\ \| __| | | | |/ _ \ 
-                                    {Fore.BLUE}.:d;.':;.     {Fore.RED}/ /  | | | |  __/ | | | | |  __/  {Fore.YELLOW}_\ \ |_| |_| | |  __/ 
-                                       {Fore.BLUE}'d,  .'    {Fore.RED}\/   |_| |_|\___|_| |_| |_|\___|  {Fore.YELLOW}\__/\__|\__, |_|\___|   
-                                         {Fore.BLUE};l   ..                                            {Fore.YELLOW}|___/         
-                                          {Fore.BLUE}.o         
-                                            {Fore.BLUE}c      
-                                            {Fore.BLUE}.'
-                                             {Fore.BLUE}.
- {Fore.RED}+------------------------------------------------------------------+
- {Fore.RED}|{Fore.GREEN} GitHub{Fore.WHITE} : {Fore.BLUE}MohmmadALbaqer {Fore.WHITE}|{Fore.YELLOW} https://www.github.com/MohmmadALbaqer/ {Fore.RED}|
- {Fore.RED}|{Fore.GREEN} Instagram{Fore.WHITE} :{Fore.BLUE} r94xs {Fore.WHITE}      |{Fore.YELLOW} https://www.instagram.comr94xs/        {Fore.RED}|
- {Fore.RED}+------------------------------------------------------------------+{Style.RESET_ALL}        
-""")
+                     {B};XO,                         {R}_____ _                            {Y}__ _         _        
+                       {B},d0Odlc;,..               {R}/__   \ |__   ___ _ __ ___   ___   {Y}/ _\ |_ _   _| | ___     
+                           {B}..',;:cdOOd::,.         {R}/ /\/ '_ \ / _ \ '_ ` _ \ / _ \  {Y}\ \| __| | | | |/ _ \ 
+                                    {B}.:d;.':;.     {R}/ /  | | | |  __/ | | | | |  __/  {Y}_\ \ |_| |_| | |  __/ 
+                                       {B}'d,  .'    {R}\/   |_| |_|\___|_| |_| |_|\___|  {Y}\__/\__|\__, |_|\___|   
+                                         {B};l   ..                                            {Y}|___/         
+                                          {B}.o         
+                                            {B}c      
+                                            {B}.'
+                                             {B}.
+{R}+------------------------------------------------------------------+
+{R}|{G} GitHub{W} : {B}MohmmadALbaqer {W}|{Y} https://www.github.com/MohmmadALbaqer/ {R}|
+{R}|{G} Instagram{W} :{B} r94xs {W}      |{Y} https://www.instagram.com/r94xs/       {R}|
+{R}+------------------------------------------------------------------+{W}""")
 
 def choose_environment():
     print(f"""
 +---+----------------------------------------+
-|{Fore.GREEN}ID{Style.RESET_ALL} | {Fore.YELLOW}Options{Style.RESET_ALL}                                |
+|{G}ID{W} | {Y}Options{W}                                |
 |---+----------------------------------------+
-| {Fore.BLUE}1{Style.RESET_ALL} | {Fore.MAGENTA}Switch between Kali Linux environments{Style.RESET_ALL} |
-| {Fore.BLUE}2{Style.RESET_ALL} | {Fore.MAGENTA}Install environments{Style.RESET_ALL}                   |
-| {Fore.BLUE}3{Style.RESET_ALL} | {Fore.MAGENTA}Install all environments{Style.RESET_ALL}               |
+| {B}1{W} | {M}Switch between Kali Linux environments{W} |
+| {B}2{W} | {M}Install environments{W}                   |
+| {B}3{W} | {M}Install all environments{W}               |
 +---+----------------------------------------+
 """)
     
-    choice = input(f"{Fore.WHITE}[{Fore.BLUE}+{Fore.WHITE}]{Fore.YELLOW} Please choose the option number: {Style.RESET_ALL}")
+    choice = input(f"{Enter} Please choose the option number: {W}")
 
     if choice == '1':
         print(f"""
 +---+---------+
-|{Fore.GREEN}ID{Style.RESET_ALL} | {Fore.YELLOW}Options{Style.RESET_ALL} |
+|{G}ID{W} | {Y}Options{W} |
 |---+---------+
-| {Fore.BLUE}1{Style.RESET_ALL} | {Fore.MAGENTA}gdm3{Style.RESET_ALL}    |
-| {Fore.BLUE}2{Style.RESET_ALL} | {Fore.MAGENTA}lightdm{Style.RESET_ALL} |
-| {Fore.BLUE}3{Style.RESET_ALL} | {Fore.MAGENTA}sddm{Style.RESET_ALL}    |
+| {B}1{W} | {M}gdm3{W}    |
+| {B}2{W} | {M}lightdm{W} |
+| {B}3{W} | {M}sddm{W}    |
 +---+---------+
 """)
         
-        env_choice = input(f"{Fore.WHITE}[{Fore.BLUE}+{Fore.WHITE}]{Fore.YELLOW} Please choose the environment number: {Style.RESET_ALL}")
+        env_choice = input(f"{Enter} Please choose the environment number: {W}")
         
         if env_choice in ['1', '2', '3']:
             env_name = ['gdm3', 'lightdm', 'sddm'][int(env_choice) - 1]
             os.system(f"sudo dpkg-reconfigure {env_name}")
         else:
-            print(f"{Fore.YELLOW}[{Fore.RED}!{Fore.YELLOW}] {Fore.RED}Incorrect selection please try again{Style.RESET_ALL}")
+            print(f"{ERROR} Incorrect selection please try again{W}")
 
     elif choice == '2':
         print(f"""
 +---+--------------------+
-|{Fore.GREEN}ID{Style.RESET_ALL} | {Fore.YELLOW}options{Style.RESET_ALL}            |
+|{G}ID{W} | {Y}options{W}            |
 |---+--------------------+
-| {Fore.BLUE}1{Style.RESET_ALL} | {Fore.MAGENTA}lightdm{Style.RESET_ALL}            |
-| {Fore.BLUE}2{Style.RESET_ALL} | {Fore.MAGENTA}gdm3{Style.RESET_ALL}               |
-| {Fore.BLUE}3{Style.RESET_ALL} | {Fore.MAGENTA}kali-desktop-gnome{Style.RESET_ALL} |
-| {Fore.BLUE}4{Style.RESET_ALL} | {Fore.MAGENTA}kali-desktop-kde{Style.RESET_ALL}   |
-| {Fore.BLUE}5{Style.RESET_ALL} | {Fore.MAGENTA}kali-desktop-xfce{Style.RESET_ALL}  |
-| {Fore.BLUE}6{Style.RESET_ALL} | {Fore.MAGENTA}kali-desktop-lxde{Style.RESET_ALL}  |
-| {Fore.BLUE}7{Style.RESET_ALL} | {Fore.MAGENTA}kali-desktop-i3{Style.RESET_ALL}    |
+| {B}1{W} | {M}lightdm{W}            |
+| {B}2{W} | {M}gdm3{W}               |
+| {B}3{W} | {M}kali-desktop-gnome{W} |
+| {B}4{W} | {M}kali-desktop-kde{W}   |
+| {B}5{W} | {M}kali-desktop-xfce{W}  |
+| {B}6{W} | {M}kali-desktop-lxde{W}  |
+| {B}7{W} | {M}kali-desktop-i3{W}    |
 +---+--------------------+
 """)
         
 
-        env_choice = input(f"{Fore.WHITE}[{Fore.BLUE}+{Fore.WHITE}]{Fore.YELLOW} Please choose the environment number: {Style.RESET_ALL}")
+        env_choice = input(f"{Enter} Please choose the environment number: {W}")
 
         if env_choice in ['1', '2', '3', '4', '5', '6', '7']:
             env_name = ['lightdm', 'gdm3', 'kali-desktop-gnome', 'kali-desktop-kde', 'kali-desktop-xfce', 'kali-desktop-lxde', 'kali-desktop-i3'][int(env_choice) - 1]
             os.system(f"sudo apt install {env_name}")
         else:
-            print(f"{Fore.YELLOW}[{Fore.RED}!{Fore.YELLOW}] {Fore.RED}Incorrect selection please try again{Style.RESET_ALL}")
+            print(f"{ERROR} Incorrect selection please try again{W}")
 
     elif choice == '3':
         os.system("sudo apt-get install kali-linux-everything")
 
     else:
-        print(f"{Fore.YELLOW}[{Fore.RED}!{Fore.YELLOW}] {Fore.RED}Incorrect selection please try again{Style.RESET_ALL}")
+        print(f"{ERROR} Incorrect selection please try again{W}")
 
 if __name__ == "__main__":
     choose_environment()
