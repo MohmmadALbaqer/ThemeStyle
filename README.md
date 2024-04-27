@@ -41,6 +41,22 @@ Allows you to download all environments in one go
 
 ```
 
+### kali-desktop-xfce
+
+
+![Logo](kali-desktop-xfce.jpg)
+
+
+### kali-desktop-gnome
+
+
+![Logo](kali-desktop-gnome.jpg)
+
+### kali-desktop-kde
+
+
+![Logo](kali-desktop-kde.jpg)
+
 
 
 
