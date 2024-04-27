@@ -65,9 +65,7 @@ Allows you to download all environments in one go
 ```
 $ git clone https://github.com/MohmmadALbaqer/ThemeStyle.git
 $ cd ThemeStyle
-$ pip3 install -r requirements.txt
 $ sudo python3 Style.py
-
 ```
 
 
