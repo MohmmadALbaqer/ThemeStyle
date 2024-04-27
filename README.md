@@ -1,7 +1,7 @@
 ### ScreenShot
 
 
-![Logo](ScreenShohBanner.png)
+![Logo](ScreenShoh_Banner.png)
 
 
 ```
