@@ -1,4 +1,6 @@
 import os
+import time
+import datetime
 
 os.system("clear")
 
@@ -11,9 +13,28 @@ M = "\033[95;1m"  # Magenta
 W = "\033[97;1m"  # White
 D = "\033[90;1m"  # Grey
 
-sign = f"{G}[{B}*{G}]{B}"
-Enter = f"{B}[{G}+{B}]{G}"
-ERROR = f"{Y}[{R}!{Y}]{R}"
+sign = "\033[92;1m" + "[" + "\033[94;1m" + "*" + "\033[92;1m" + "]" + "\033[94;1m"
+Enter = "\033[94;1m" + "[" + "\033[92;1m" + "+" + "\033[94;1m" + "]" + "\033[92;1m"
+ERROR = "\033[93;1m" + "[" + "\033[91;1m" + "ERROR" + "\033[93;1m" + "]" + "\033[91;1m"
+INFO = "\033[93;1m" + "[" + "\033[92;1m" + "INFO" + "\033[93;1m" + "]" + "\033[94;1m"
+warning = "\033[93;1m" + "[" + "\033[91;1m" + "WARNING" + "\033[93;1m" + "]" + "\033[91;1m"
+Complete = "\033[94;1m" + "[" + "\033[92;1m" + "COMPLETE" + "\033[94;1m" + "]" + "\033[92;1m"
+Failed = "\033[93;1m" + "[" + "\033[91;1m" + "FAILED" + "\033[93;1m" + "]" + "\033[91;1m"
+please = "\033[93;1m" + "[" + "\033[91;1m" + "!" + "\033[93;1m" + "]" + "\033[91;1m"
+Question = "\033[95;1m" + "[" + "\033[96;1m" + "?" + "\033[95;1m" + "]" + "\033[97;1m"
+
+now = datetime.datetime.now()
+formatted_time = now.strftime("%I:%M %p")
+formatted_day = now.strftime("%A")
+
+date_day = "\033[94;1m" + "[" + "\033[92;1m" + "Today" + "\033[94;1m" + "] " + "\033[97;1m" + "(" + "\033[93;1m" + formatted_day + "\033[95;1m" + f" {now:%B %D %Y}" + "\033[97;1m" + ")" + "\033[94;1m" + " [" + "\033[92;1m" + "Time" + "\033[94;1m" + "] " + "\033[93;1m" + "[" + "\033[91;1m" + formatted_time + "\033[93;1m" + "]" + "\033[97;1m"
+
+
+if os.geteuid() != 0:
+    sudo = "\033[1;31m" + "sudo" + "\033[97;1m"
+    root = "\033[93;1m" + "root" + "\033[97;1m"
+    print(f"{please} {W}please use {root} Type a command {sudo}")
+    exit()
 
 print(f"""{B}
             ..,;:ccc,.                             
@@ -32,7 +53,7 @@ print(f"""{B}
                                     {B}.:d;.':;.     {R}/ /  | | | |  __/ | | | | |  __/  {Y}_\ \ |_| |_| | |  __/ 
                                        {B}'d,  .'    {R}\/   |_| |_|\___|_| |_| |_|\___|  {Y}\__/\__|\__, |_|\___|   
                                          {B};l   ..                                            {Y}|___/         
-                                          {B}.o         
+                                          {B}.o      {G}Version [PRO]    
                                             {B}c      
                                             {B}.'
                                              {B}.
@@ -71,7 +92,7 @@ def choose_environment():
             env_name = ['gdm3', 'lightdm', 'sddm'][int(env_choice) - 1]
             os.system(f"sudo dpkg-reconfigure {env_name}")
         else:
-            print(f"{ERROR} Incorrect selection please try again{W}")
+            print(f"{please} Incorrect selection please try again{W}")
 
     elif choice == '2':
         print(f"""
@@ -98,10 +119,27 @@ def choose_environment():
             print(f"{ERROR} Incorrect selection please try again{W}")
 
     elif choice == '3':
-        os.system("sudo apt-get install kali-linux-everything")
+        input(f"{warning} {W}The download size is {G}[{B}50GB{G}]{W} and takes {G}[{B}30 minutes{G}]{W} If you agree click {B}[{G}Enter{B}]{W} or you want to stop and exit click {B}[{Y}Ctrl {W}+{Y} C{B}]{W}\n\r")
+        print(date_day)
+        os.system("sudo apt-get install kali-linux-everything -y")
+        os.system("sudo apt install kali-legacy-wallpapers -y")
+        os.system("sudo apt install kali-wallpapers-2019.4 -y")
+        os.system("sudo apt install kali-wallpapers-2020.4 -y")
+        os.system("sudo apt install kali-wallpapers-2021.4 -y")
+        os.system("sudo apt install kali-wallpapers-2022 -y")
+        os.system("sudo apt install kali-wallpapers-2023 -y")
+        os.system("sudo apt install kali-wallpapers-202 -y")
+        os.system("sudo apt install kali-wallpapers-all -y")
+        os.system("sudo apt install kali-wallpapers-legacy -y")
+        os.system("sudo apt install kali-wallpapers-mobile-2023 -y")
+        print(date_day)
+        time.sleep(5)
+        os.system("clear")
+        input(f"{Enter} Do you want to restart? If you agree click {B}[{G}Enter{B}]{W} or you want to stop and exit click {B}[{Y}Ctrl {W}+{Y} C{B}]{W}\n\r")
 
+        os.system("sudo reboot")
     else:
-        print(f"{ERROR} Incorrect selection please try again{W}")
+        print(f"{please} Incorrect selection please try again{W}")
 
 if __name__ == "__main__":
     choose_environment()
