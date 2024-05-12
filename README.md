@@ -1,7 +1,7 @@
 ### ScreenShot
 
 
-![Logo](ScreenShoh_Banner.png)
+![Logo](ThemeStyleKaliLinux.png)
 
 
 ```
